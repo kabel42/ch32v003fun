@@ -711,19 +711,19 @@ typedef union {
 		uint32_t CC1E  :1;
 		uint32_t CC1P  :1;
 		uint32_t CC1NE :1;
-    uint32_t CC1NP :1;
+	    uint32_t CC1NP :1;
 		uint32_t CC2E  :1;
 		uint32_t CC2P  :1;
 		uint32_t CC2NE :1;
-    uint32_t CC2NP :1;
+    	uint32_t CC2NP :1;
 		uint32_t CC3E  :1;
 		uint32_t CC3P  :1;
 		uint32_t CC3NE :1;
-    uint32_t CC3NP :1;
+    	uint32_t CC3NP :1;
 		uint32_t CC4E  :1;
 		uint32_t CC4P  :1;
 		uint32_t CC4NE :1;
-    uint32_t CC4NP :1;
+    	uint32_t CC4NP :1;
 	};
 } TIM_CCER_t;
 
@@ -747,7 +747,7 @@ typedef struct
     uint16_t      RESERVED2;
     __IO uint16_t DMAINTENR;
     uint16_t      RESERVED3;
-    __IO uint16_t INTFR;
+    __O  uint16_t INTFR;
     uint16_t      RESERVED4;
     __O  uint16_t SWEVGR;
     uint16_t      RESERVED5;
