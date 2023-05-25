@@ -131,6 +131,13 @@ int main()
 		DYN_GPIO_WRITE(GPIOD, BSHR, (GPIO_BSHR_t){.BS0 = 1, .BR4 = 1});
 		Delay_Ms(1);
 
+		__NOP();
+		__NOP();
+		__NOP();
+		__NOP();
+		__NOP();
+		__NOP();
+
 		// Turn D0 off and D4 on at the same time
 		DYN_GPIO_WRITE(GPIOD, BSHR, (GPIO_BSHR_t){.BR0 = 1, .BS4 = 1});
 		Delay_Ms(1);
