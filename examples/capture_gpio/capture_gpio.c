@@ -61,8 +61,8 @@ void TIM1_CC_IRQHandler(void)
 		if (DYN_TIM_READ(TIM1, INTFR).CC2OF)
 		{
 			// clear
-			DYN_TIM_WRITE(TIM1, INTFR, (TIM_INTFR_t){.CC2OF = 1});
-			printf("OF\n");
+			TIM1->INTFR = ~(TIM_CC2OF);  // cleard by writing 0
+			printf("OF0\n");
 		}
 	}
 	else
