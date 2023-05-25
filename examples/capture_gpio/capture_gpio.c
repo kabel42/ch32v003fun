@@ -49,6 +49,22 @@ void TIM1_CC_IRQHandler(void)
 			printf("OF0\n");
 		}
 	}
+	if (DYN_TIM_READ(TIM1, INTFR).CC2IF)
+	{
+		// get capture
+		captureVals[write++] = TIM1->CH2CVR; // capture valur
+		if (write == queuelen)
+		{
+			write = 0;
+		}
+		// overflow
+		if (DYN_TIM_READ(TIM1, INTFR).CC2OF)
+		{
+			// clear
+			DYN_TIM_WRITE(TIM1, INTFR, (TIM_INTFR_t){.CC2OF = 1});
+			printf("OF\n");
+		}
+	}
 	else
 	{
 		printf("badtrigger\n");
