@@ -49,7 +49,7 @@ void TIM1_CC_IRQHandler(void)
 			printf("OF0\n");
 		}
 	}
-	if (DYN_TIM_READ(TIM1, INTFR).CC2IF)
+	else if (DYN_TIM_READ(TIM1, INTFR).CC2IF)
 	{
 		// get capture
 		captureVals[write++] = TIM1->CH2CVR; // capture valur
