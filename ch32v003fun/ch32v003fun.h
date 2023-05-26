@@ -373,7 +373,7 @@ typedef struct
 
 /* Reset and Clock Control */
 typedef union {
-	uint16_t __FULL;
+	uint32_t __FULL;
 	struct {
 		uint32_t HSION :1;
 		uint32_t HSIRDY :1;
@@ -391,7 +391,7 @@ typedef union {
 	};
 } RCC_CTLR_t;
 typedef union {
-	uint16_t __FULL;
+	uint32_t __FULL;
 	struct {
 		uint32_t SW :2;
 		uint32_t SWS :2;
@@ -406,7 +406,7 @@ typedef union {
 	};
 } RCC_CFGR0_t;
 typedef union {
-	uint16_t __FULL;
+	uint32_t __FULL;
 	struct {
 		uint32_t LSIRDYF :1;
 		uint32_t :1;
@@ -432,7 +432,7 @@ typedef union {
 	};
 } RCC_INTR_t;
 typedef union {
-	uint16_t __FULL;
+	uint32_t __FULL;
 	struct {
 		uint32_t AFIORST :1;
 		uint32_t :1;
@@ -451,7 +451,7 @@ typedef union {
 	};
 } RCC_APB2PRSTR_t;
 typedef union {
-	uint16_t __FULL;
+	uint32_t __FULL;
 	struct {
 		uint32_t :11;
 		uint32_t WWDGRST :1;
@@ -463,7 +463,7 @@ typedef union {
 	};
 } RCC_APB1PRSTR_t;
 typedef union {
-	uint16_t __FULL;
+	uint32_t __FULL;
 	struct {
 		uint32_t DMA1EN :1;
 		uint32_t :1;
@@ -472,7 +472,7 @@ typedef union {
 	};
 } RCC_AHBPCENR_t;
 typedef union {
-	uint16_t __FULL;
+	uint32_t __FULL;
 	struct {
 		uint32_t AFIOEN :1;
 		uint32_t :1;
@@ -491,7 +491,7 @@ typedef union {
 	};
 } RCC_APB2PCENR_t;
 typedef union {
-	uint16_t __FULL;
+	uint32_t __FULL;
 	struct {
 		uint32_t TIM2EN :1;
 		uint32_t :10;
@@ -504,7 +504,7 @@ typedef union {
 	};
 } RCC_APB1PCENR_t;
 typedef union {
-	uint16_t __FULL;
+	uint32_t __FULL;
 	struct {
 		uint32_t LSION :1;
 		uint32_t LSIRDY :1;
