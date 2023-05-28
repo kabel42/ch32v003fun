@@ -124,7 +124,7 @@ int main()
 		if (read != write)
 		{
 			uint32_t val = captureVals[read++];
-			printf("capture %d %u\n", val>>16, val&0xFFFF);
+			printf("capture %d %u\n", (uint16_t)(val>>16), (uint16_t)(val&0xFFFF));
 			if (read == queuelen)
 			{
 				read = 0;
